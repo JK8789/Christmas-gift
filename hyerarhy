@@ -13,7 +13,7 @@ class AbstructCandies {
 Class Child {
 }
 
-AbstructCandies "1..*" o-right- "1" Child
+AbstructCandies "*" o-right- "1" Child
 
 Class Chokolate {
 -cocoaPercentage
@@ -24,12 +24,12 @@ Class Chokolate {
 Class Topping {
   +getname()
 }
-Class CHokoTopping {
+Class ChokoTopping {
   -name
   +getname()
 }
-Topping <|-- CHokoTopping
-Chokolate "1" -right-o "1..*" Topping
+Topping <|-- ChokoTopping
+Chokolate "1" -right-o "*" Topping
 
 AbstructCandies <|-- Chokolate
 
@@ -50,12 +50,4 @@ AbstructCandies "1" -right-o "1" AbstructCandiesTaste
 Class Zephir {
 }
 AbstructCandies <|-- Zephir
-Class KitKat{
--raisins
-}
-Chokolate <|-- KitKat
-Class Snikers{
--extraNuts
-}
-Chokolate <|-- Snikers
 @enduml

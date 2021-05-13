@@ -10,8 +10,6 @@ import com.epam.project.model.CandiesBag;
 import com.epam.project.model.Caramel;
 import com.epam.project.model.ChokoTopping;
 import com.epam.project.model.Chokolate;
-import com.epam.project.model.Kitkat;
-import com.epam.project.model.Snikers;
 import com.epam.project.model.Topping;
 import com.epam.project.model.Zephir;
 import java.util.ArrayList;
@@ -56,29 +54,23 @@ public class GiftCreator {
         price = 0.6f;
         bag.add(new Chokolate(cocoaPercentage, toppings, name, taste, weight, price));
         
-        boolean raisins = true;
         cocoaPercentage = 65;
-        name = "DarkKitKat";
+        toppings = new ArrayList<>();
+        toppings.add(new ChokoTopping("raisins"));
+        name = "KitKat";
         taste = COFFEE;
         weight = 0.4f;
         price = 2.0f;
-        bag.add(new Kitkat(raisins, cocoaPercentage, name, taste, weight, price));
+        bag.add(new Chokolate(cocoaPercentage, toppings, name, taste, weight, price));
         
-        boolean extraNuts = true;
         cocoaPercentage = 60;
-        name = "SuperSnikers";
+        toppings = new ArrayList<>();
+        toppings.add(new ChokoTopping("extraNuts"));
+        name = "Snikers";
         taste = NUT;
         weight = 0.3f;
         price = 2.0f;
-        bag.add(new Snikers(extraNuts, cocoaPercentage, name, taste, weight, price));
-        
-        extraNuts = true;
-        cocoaPercentage = 60;
-        name = "SuperSnikers";
-        taste = COFFEE;
-        weight = 0.3f;
-        price = 2.0f;
-        bag.add(new Snikers(extraNuts, cocoaPercentage, name, taste, weight, price));
+        bag.add(new Chokolate(cocoaPercentage, toppings, name, taste, weight, price));      
         return bag;
     }
 }
