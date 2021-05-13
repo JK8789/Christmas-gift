@@ -1,33 +1,53 @@
 @startuml
 hide  circle 
 class AbstructCandies {
+  -taste
   -name
   -weight
-  -price 
+  -price
+  +gettaste() 
   +getname()
   +getweight()
   +getprice()
 }
 Class Child {
 }
+
 AbstructCandies "1..*" o-right- "1" Child
-Class Chokolate{
+
+Class Chokolate {
 -cocoaPercentage
+-toppings
 }
+
+
+Class Topping {
+  +getname()
+}
+Class CHokoTopping {
+  -name
+  +getname()
+}
+Topping <|-- CHokoTopping
+Chokolate "1" -right-o "1..*" Topping
+
 AbstructCandies <|-- Chokolate
+
 Class Caramel {
 -stuffing
 }
+
 AbstructCandies <|-- Caramel
 
-enum ZephirTaste {
+enum AbstructCandiesTaste {
   APPLE
   VANILLA
   ORANGE
+  NUT
+  COFFEE
 }
-
+AbstructCandies "1" -right-o "1" AbstructCandiesTaste
 Class Zephir {
--ZephirTaste taste
 }
 AbstructCandies <|-- Zephir
 Class KitKat{

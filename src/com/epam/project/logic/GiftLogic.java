@@ -1,8 +1,8 @@
-package logic;
+package com.epam.project.logic;
 
 import java.util.List;
-import model.AbstructCandies;
-import model.CandiesBag;
+import com.epam.project.model.AbstructCandies;
+import com.epam.project.model.CandiesBag;
 
 public class GiftLogic {
     public static float calculateTotalWeight(CandiesBag bag){

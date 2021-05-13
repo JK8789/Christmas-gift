@@ -1,4 +1,4 @@
-package model;
+package com.epam.project.model;
 import java.util.List;
 import java.util.LinkedList;
 public class CandiesBag {

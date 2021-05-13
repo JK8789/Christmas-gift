@@ -1,5 +1,7 @@
-import model.CandiesBag;
-import view.GiftPrinter;
+package com.epam.project;
+
+import com.epam.project.model.CandiesBag;
+import com.epam.project.view.GiftPrinter;
 
 public class Main {
 

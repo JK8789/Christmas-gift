@@ -1,7 +1,7 @@
-package view;
+package com.epam.project.view;
 
-import logic.GiftLogic;
-import model.CandiesBag;
+import com.epam.project.logic.GiftLogic;
+import com.epam.project.model.CandiesBag;
 
 public class GiftPrinter {
     public void print(CandiesBag bag) {
